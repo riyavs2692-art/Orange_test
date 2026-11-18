@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
+import Page_Package.Dashboard;
 import Page_Package.Login_Page;
 
 public class Base_Class 
@@ -12,6 +13,7 @@ public class Base_Class
 {
  public static WebDriver driver;
  public Login_Page loginob;
+ public Dashboard dashob;
  
  @BeforeTest
 	 public void setup()
@@ -25,6 +27,7 @@ public class Base_Class
  public void objectmethod()
  {
  	loginob = new Login_Page(driver);
+ 	dashob  =  new Dashboard(driver);
  }
 }
 
